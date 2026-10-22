@@ -1,0 +1,77 @@
+[
+  {
+    "username": "realmeckelgmailcom",
+    "password": "$2b$10$1WdVb4t27UGy1ycXXEkYrez3h3hgKnTuRBTw3eLn9//26ozPH8WfG"
+  },
+  {
+    "username": "dev",
+    "password": "$2b$10$4KKFu9bv/NKVuFlKeFZMsu9Y.odBSIMfMoQYacryd.atHvp3JuW/u"
+  },
+  {
+    "username": "Devganteng",
+    "email": {},
+    "password": "$2b$10$moBVy8dL2t2Y/fdOSywfj.I500Fc1OsrQn0ynqE/eEGEYyD/O8wn6",
+    "verified": false,
+    "code": 435225
+  },
+  {
+    "username": "Devganteng",
+    "email": {},
+    "password": "$2b$10$wP4qQHOH.1q7mASlLXQxx.YA/jMT1paKFm9iPKdXtnzwBNh8uo0bO",
+    "verified": false,
+    "code": 893708
+  },
+  {
+    "username": "blabla",
+    "email": {},
+    "password": "$2b$10$pMFmbsHJLMDBK9zwo4pzTO4fW74ceZ37MwZPGORNGTBaVOgOdUo6q",
+    "verified": false,
+    "code": 196540
+  },
+  {
+    "username": "blabla",
+    "email": {},
+    "password": "$2b$10$uZQdSwxl1s86DUsQJbz0O.ny.0dYOYYN6MXNWN5B6qOH.LnTOeDWu",
+    "verified": false,
+    "code": 772934
+  },
+  {
+    "username": "blabla",
+    "email": {},
+    "password": "$2b$10$TDSKJ1qtCmX/gJJznzLtPeRsJg9VRXTMrpX4p3oXCxJg7ax./C8Ay",
+    "verified": false,
+    "code": 340515
+  },
+  {
+    "username": "kontol",
+    "email": "gokslets@gmail.com",
+    "password": "$2b$10$F79baptWdKzS17R7AvJjWuvFZamtHPlFvkqowsJ05pzcyY/Vu05ty",
+    "verified": true,
+    "loginCodeSentAt": 1792646206492,
+    "loginCodeWindowStartedAt": 1792646206492,
+    "loginCodeSendCount": 1
+  },
+  {
+    "username": "kontolq",
+    "email": "realmeckel@gmail.com",
+    "password": "$2b$10$EHWog981L2EvYzwwMRZuSe/rPSS.Yc1DsjZ7PlduSjerYVPcQK9O.",
+    "verified": true,
+    "codeSentAt": 1792638697296,
+    "codeWindowStartedAt": 1792638697296,
+    "codeSendCount": 1,
+    "googleAuth": true,
+    "loginCodeHash": "1f41fd1d8b673a8a457a1c2518909d2e28cf774d95f8111a2a6f8f2053c2fe59",
+    "loginCodeExpiresAt": 1792639866357,
+    "loginCodeAttempts": 0,
+    "loginCodeSentAt": 1792639266357,
+    "loginCodeWindowStartedAt": 1792639266357,
+    "loginCodeSendCount": 1
+  },
+  {
+    "username": "kontol",
+    "email": "badanhs842@gmail.com",
+    "password": "$2b$10$633qOq4L6Lp5qU8LBu1LLuEgAGmPTxb428V0plGP4U8New0S93bt.",
+    "verified": false,
+    "code": 196306
+  }
+]

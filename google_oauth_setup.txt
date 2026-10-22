@@ -1,0 +1,11 @@
+
+Install:
+npm install passport passport-google-oauth20
+
+Environment:
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_CALLBACK_URL=/auth/google/callback
+
+Flow:
+Login button -> Google -> callback -> create/find user -> session login

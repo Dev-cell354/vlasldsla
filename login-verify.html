@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Confirm Sign-In - Omnimun AI</title>
+<style>
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{position:relative;isolation:isolate;margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:36px 20px;background:radial-gradient(ellipse at 50% 0%,#1a1a1a 0,transparent 45%),radial-gradient(ellipse at 100% 100%,#111 0,transparent 42%),#070707;font-family:'DM Sans',Inter,Arial,sans-serif;color:#f7f7f7}
+body:before{content:'';position:fixed;inset:20px;border:1px solid #ffffff08;border-radius:28px;pointer-events:none;z-index:-1}
+.container{position:relative;width:460px;max-width:100%;padding:42px;border:1px solid #303030;border-radius:25px;background:linear-gradient(145deg,#151515,#0c0c0c 80%);box-shadow:0 30px 100px #0009}
+.auth-logo{display:block;width:155px;max-width:100%;max-height:55px;object-fit:contain;object-position:left center;margin:0 0 30px;filter:none}
+.eyebrow{margin:0 0 11px;color:#999;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h1{margin:0 0 12px;font-size:32px;font-weight:800;letter-spacing:-1.1px;line-height:1.16;color:#fff}
+.intro{margin:0 0 23px;color:#999;font-size:13px;line-height:1.9}
+.destination{margin:0 0 23px;padding:13px 14px;border:1px solid #303030;border-radius:12px;background:#101010;color:#bbb;font-size:12px;line-height:1.7}
+.destination strong{display:block;margin-top:3px;color:#fff;font-size:13px;letter-spacing:.2px}
+label{display:block;margin-bottom:8px;color:#ddd;font-size:12px;font-weight:700;letter-spacing:.2px}
+input{width:100%;padding:15px 16px;margin-bottom:12px;border:1px solid #353535;border-radius:12px;background:#090909;color:#fff;font-family:Consolas,Monaco,monospace;font-size:22px;letter-spacing:9px;text-align:center;outline:none;transition:border-color .2s,box-shadow .2s}
+input::placeholder{color:#565656;letter-spacing:7px}
+input:focus{border-color:#aaa;box-shadow:0 0 0 3px #ffffff0b}
+button{width:100%;min-height:47px;padding:13px 16px;border:1px solid #fff;border-radius:12px;background:#fff;color:#050505;font-weight:800;cursor:pointer;transition:transform .18s,background .18s}
+button:hover{background:#dedede;transform:translateY(-1px)}
+button:disabled{opacity:.55;cursor:wait;transform:none}
+.secondary{margin-top:10px;border-color:#383838;background:#141414;color:#eee;font-size:12px;font-weight:700}
+.secondary:hover{background:#202020}
+#message{min-height:18px;margin:0 0 14px;font-size:12px;line-height:1.7}
+#message.error{color:#ffb4b4}
+#message.success{color:#bde5b8}
+.note{margin:18px 0 0;color:#777;font-size:11px;line-height:1.8}
+.link{text-align:center;margin-top:22px;color:#888;font-size:12px}
+.link a{color:#fff;font-weight:700;text-decoration:none}
+.link a:hover{text-decoration:underline}
+.brand{position:fixed;right:28px;bottom:22px;color:#777;font-size:9px;letter-spacing:2px;text-transform:uppercase}
+@media(max-width:520px){body{padding:18px 14px}body:before{inset:8px;border-radius:18px}.container{padding:30px 23px;border-radius:20px}h1{font-size:28px}.auth-logo{margin-bottom:24px}.brand{right:18px;bottom:13px;font-size:8px}input{font-size:20px;letter-spacing:7px}}
+</style>
+
+<style id="omnimun-white-auth-theme-v31">
+:root{color-scheme:light!important}
+html{color-scheme:light!important;background:#f7f8fa!important}
+body{
+ background:#f7f8fa!important;color:#202124!important;
+}
+body:before{border-color:#e5e7eb!important}
+.container{
+ background:#fff!important;color:#202124!important;border:1px solid #e2e5e9!important;
+ box-shadow:0 22px 70px #1111110d!important
+}
+.auth-logo{
+ filter:none!important;mix-blend-mode:normal!important;background:transparent!important;
+ object-fit:contain!important;object-position:left center!important
+}
+h1{color:#17191c!important}
+p,.intro,.note{color:#626b76!important}
+.eyebrow{color:#6b7280!important}
+.destination{background:#f7f8fa!important;border-color:#e3e7eb!important;color:#5f6873!important}
+.destination strong{color:#17191c!important}
+label{color:#333941!important}
+input{
+ background:#fff!important;color:#17191c!important;border-color:#d8dde3!important;
+ box-shadow:none!important
+}
+input::placeholder{color:#9aa1aa!important}
+input:focus{border-color:#7d8793!important;box-shadow:0 0 0 3px #11111108!important}
+button{
+ background:#17191c!important;color:#fff!important;border:1px solid #17191c!important;
+ box-shadow:none!important
+}
+button:hover{background:#34383e!important;color:#fff!important}
+button:disabled{background:#e8ebef!important;color:#8c949e!important;border-color:#e8ebef!important}
+button.secondary,.secondary{
+ background:#fff!important;color:#333941!important;border-color:#d8dde3!important
+}
+button.secondary:hover,.secondary:hover{background:#f3f5f7!important;color:#17191c!important}
+#error,#message.error{color:#b42318!important}
+#message.success{color:#187341!important}
+.link{color:#6b7280!important}
+.link a{color:#17191c!important}
+.brand{color:#8a919b!important}
+</style>
+
+
+<style id="omnimun-white-auth-v32">
+:root{color-scheme:light!important}
+html,body{background:#f7f8fa!important;color:#202124!important;color-scheme:light!important}
+body{margin:0!important}
+.container{
+  background:#fff!important;color:#202124!important;border:1px solid #e1e5e9!important;
+  border-radius:20px!important;box-shadow:0 20px 65px #1111110d!important;
+}
+.auth-logo{filter:none!important;mix-blend-mode:normal!important;background:transparent!important;object-fit:contain!important;object-position:center!important}
+h1{color:#17191c!important}
+p,.intro,.note{color:#626b76!important}
+.eyebrow{color:#6b7280!important}
+.destination{background:#f7f8fa!important;border-color:#e3e7eb!important;color:#5f6873!important}
+.destination strong{color:#17191c!important}
+label{color:#333941!important}
+input{background:#fff!important;color:#17191c!important;border-color:#d8dde3!important;box-shadow:none!important}
+input::placeholder{color:#9aa1aa!important}
+input:focus{border-color:#7d8793!important;box-shadow:0 0 0 3px #11111108!important}
+button{background:#17191c!important;color:#fff!important;border:1px solid #17191c!important;box-shadow:none!important}
+button:hover{background:#34383e!important;color:#fff!important}
+button:disabled{background:#e8ebef!important;color:#8c949e!important;border-color:#e8ebef!important}
+button.secondary,.secondary{background:#fff!important;color:#333941!important;border-color:#d8dde3!important}
+button.secondary:hover,.secondary:hover{background:#f3f5f7!important;color:#17191c!important}
+#error,#message.error{color:#b42318!important}
+#message.success{color:#187341!important}
+.link{color:#6b7280!important}
+.link a{color:#17191c!important}
+.brand{color:#8a919b!important}
+</style>
+
+</head>
+<body>
+<div class="container">
+  <img src="logo-omnimun.svg" alt="Omnimun logo" class="auth-logo">
+  <div class="eyebrow">Sign-in security</div>
+  <h1>Confirm it's you.</h1>
+  <p class="intro">Your password was accepted. To make sure the account belongs to you, enter the six-digit one-time code sent to the email address registered to your Omnimun AI account.</p>
+  <div class="destination">Verification code sent to<strong id="destination">your registered email address</strong></div>
+  <div id="message" role="status" aria-live="polite"></div>
+  <form id="otpForm">
+    <label for="code">Six-digit verification code</label>
+    <input id="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" placeholder="000000" required aria-describedby="securityNote">
+    <button id="verifyButton" type="submit">Verify &amp; Sign In</button>
+  </form>
+  <button id="resendButton" class="secondary" type="button" disabled>Resend code</button>
+  <p id="securityNote" class="note">For your security, this code expires after 10 minutes, can be used only once, and is limited to five incorrect attempts. Never share it with anyone. If you did not attempt to sign in, do not enter the code.</p>
+  <div class="link">Not you? <a href="login.html">Return to sign in</a></div>
+</div>
+<div class="brand">Made by Orthera</div>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const form=$('otpForm'),codeInput=$('code'),verifyButton=$('verifyButton'),resendButton=$('resendButton'),messageEl=$('message');
+let verifying=false,sending=false,resendAt=0,ticker=null;
+function showMessage(text,kind='error'){messageEl.className=kind;messageEl.textContent=text}
+async function request(url,body,method='POST'){
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),30000);
+ try{
+  const response=await fetch(url,{method,credentials:'same-origin',signal:controller.signal,headers:body?{'Content-Type':'application/json'}:undefined,body:body?JSON.stringify(body):undefined});
+  const data=await response.json().catch(()=>{throw Error('The server returned an invalid response.')});
+  if(!response.ok||!data.success)throw Error(data.error||'The request could not be completed.');
+  return data;
+ }catch(error){throw Error(error.name==='AbortError'?'The request timed out. Please try again.':error.message)}
+ finally{clearTimeout(timer)}
+}
+function updateResend(){
+ const seconds=Math.max(0,Math.ceil((resendAt-Date.now())/1000));
+ resendButton.disabled=sending||seconds>0;
+ resendButton.textContent=seconds?`Resend code in ${seconds}s`:'Resend verification code';
+ if(!seconds&&ticker){clearInterval(ticker);ticker=null}
+}
+function startCooldown(seconds){resendAt=Date.now()+Math.max(0,seconds)*1000;if(ticker)clearInterval(ticker);ticker=setInterval(updateResend,250);updateResend()}
+function retrySecondsFromMessage(text){const seconds=String(text).match(/wait\s+(\d+)\s+seconds?/i);if(seconds)return Number(seconds[1]);const minutes=String(text).match(/wait\s+(\d+)\s+minutes?/i);return minutes?Number(minutes[1])*60:0}
+async function init(){
+ try{
+  const data=await request('/api/login/pending',null,'GET');
+  $('destination').textContent=data.email||'your registered email address';
+  startCooldown(Number(data.resendAfterSeconds)||0);
+  if(Number(data.expiresInSeconds)<=0)showMessage('Your code may have expired. Request a new code when the resend option becomes available.');
+ }catch(error){
+  showMessage(error.message);
+  verifyButton.disabled=true;
+  resendButton.disabled=true;
+  setTimeout(()=>{location.href='login.html?reason=challenge-expired'},1800);
+ }
+}
+form.addEventListener('submit',async event=>{
+ event.preventDefault();
+ if(verifying||!form.reportValidity())return;
+ const code=codeInput.value.trim();
+ if(!/^\d{6}$/.test(code)){showMessage('Enter the six-digit code from your email.');return}
+ verifying=true;verifyButton.disabled=true;verifyButton.textContent='Verifying...';showMessage('');
+ try{
+  await request('/api/login/verify',{code});
+  showMessage('Identity confirmed. Opening your workspace...','success');
+  location.href='/index.html';
+ }catch(error){
+  showMessage(error.message);
+  if(/session has expired|sign in again/i.test(error.message))setTimeout(()=>location.href='login.html?reason=challenge-expired',1300);
+ }finally{verifying=false;verifyButton.disabled=false;verifyButton.textContent='Verify & Sign In'}
+});
+resendButton.addEventListener('click',async()=>{
+ if(sending||resendButton.disabled)return;
+ sending=true;updateResend();showMessage('');
+ try{
+  const data=await request('/api/login/send-code',{});
+  showMessage(data.message||'A new code has been sent to your email.','success');
+  codeInput.value='';
+  startCooldown(Number(data.resendAfterSeconds)||60);
+ }catch(error){
+  showMessage(error.message);
+  const match=error.message.match(/wait\s+(\d+)\s+seconds/i);
+  if(match)startCooldown(Number(match[1]));
+ }finally{sending=false;updateResend()}
+});
+codeInput.addEventListener('input',()=>{codeInput.value=codeInput.value.replace(/\D/g,'').slice(0,6)});
+codeInput.addEventListener('keydown',event=>{if(event.key==='Enter'&&!event.isComposing){event.preventDefault();if(!event.repeat)form.requestSubmit()}});
+init();
+</script>
+</body>
+</html>

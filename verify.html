@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#ffffff"><meta name="referrer" content="strict-origin-when-cross-origin"><title>Verify Email - Omnimun</title><style>
+
+*{box-sizing:border-box}html{color-scheme:light}body{position:relative;isolation:isolate;margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:36px 20px;background:radial-gradient(ellipse at 50% 0%,#1a1a1a 0,transparent 45%),radial-gradient(ellipse at 100% 100%,#111 0,transparent 42%),#070707;font-family:'DM Sans',Inter,Arial,sans-serif;color:#f7f7f7}body:before{content:'';position:fixed;inset:20px;border:1px solid #ffffff08;border-radius:28px;pointer-events:none;z-index:-1}.container{position:relative;width:460px;max-width:100%;padding:42px;border:1px solid #303030;border-radius:25px;background:linear-gradient(145deg,#151515,#0c0c0c 80%);box-shadow:0 30px 100px #0009}h1{margin:0 0 10px;font-family:Manrope,'DM Sans',sans-serif;font-size:34px;font-weight:800;letter-spacing:-1.3px;line-height:1.15;color:#fff}p{margin:0 0 29px;color:#999;font-size:13px;line-height:1.8}.message{min-height:18px;margin:0 0 14px;font-size:12px;line-height:1.7}.message.error{color:#ffb4b4}.message.success{color:#bde5b8}.secondary{margin:0 0 18px;border-color:#383838;background:#141414;color:#eee;font-size:12px;font-weight:700}.secondary:hover{background:#202020}label{display:block;margin-bottom:8px;color:#ddd;font-size:12px;font-weight:700;letter-spacing:.2px}input{width:100%;padding:14px 15px;margin-bottom:18px;border:1px solid #353535;border-radius:12px;background:#090909;color:#fff;font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s}input::placeholder{color:#656565}input:focus{border-color:#aaa;box-shadow:0 0 0 3px #ffffff0b}button{width:100%;min-height:47px;padding:13px 16px;border:1px solid #fff;border-radius:12px;background:#fff;color:#050505;font-weight:800;cursor:pointer;transition:transform .18s,background .18s,color .18s,border-color .18s}button:hover{background:#dedede;transform:translateY(-1px)}button:disabled{opacity:.55;cursor:wait;transform:none}#error{margin:0 0 14px;color:#ffb4b4;font-size:12px;line-height:1.6}#verifyHint{color:#bbb!important;font-size:12px!important}#verifyHint a{color:#fff;font-weight:700}.link{text-align:center;margin-top:23px;color:#888;font-size:12px}.link a{color:#fff;font-weight:700;text-decoration:none}.link a:hover{text-decoration:underline}.brand{position:fixed;right:28px;bottom:22px;color:#777;font-size:9px;letter-spacing:2px;text-transform:uppercase}.auth-logo{display:block;width:170px;max-width:100%;max-height:55px;object-fit:contain;object-position:left center;margin:0 0 30px;filter:none}.auth-logo.small{width:155px}.google-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:45px;margin-top:10px;padding:10px 14px;border:1px solid #383838;border-radius:12px;background:#141414;color:#eee;font-size:13px;font-weight:600;box-shadow:none}.google-btn:hover{background:#202020;border-color:#555}.google-btn img{width:18px;height:18px;flex:0 0 18px;object-fit:contain}input+button[type=button]{display:inline-flex;align-items:center;justify-content:center;width:auto;min-height:28px;margin:-9px 0 15px;padding:5px 10px;border:1px solid #383838;border-radius:8px;background:#151515;color:#aaa;font-size:10px;font-weight:600}input+button[type=button]:hover{background:#242424;color:#fff;transform:none}form button[type=submit]{margin-top:2px}#verifyHint a{margin-left:4px}@media(max-width:520px){body{padding:18px 14px}body:before{inset:8px;border-radius:18px}.container{padding:30px 23px;border-radius:20px}h1{font-size:29px}.auth-logo{margin-bottom:24px}.brand{right:18px;bottom:13px;font-size:8px}}
+</style>
+<style id="omnimun-white-auth-theme-v31">
+:root{color-scheme:light!important}
+html{color-scheme:light!important;background:#f7f8fa!important}
+body{
+ background:#f7f8fa!important;color:#202124!important;
+}
+body:before{border-color:#e5e7eb!important}
+.container{
+ background:#fff!important;color:#202124!important;border:1px solid #e2e5e9!important;
+ box-shadow:0 22px 70px #1111110d!important
+}
+.auth-logo{
+ filter:none!important;mix-blend-mode:normal!important;background:transparent!important;
+ object-fit:contain!important;object-position:left center!important
+}
+h1{color:#17191c!important}
+p,.intro,.note{color:#626b76!important}
+.eyebrow{color:#6b7280!important}
+.destination{background:#f7f8fa!important;border-color:#e3e7eb!important;color:#5f6873!important}
+.destination strong{color:#17191c!important}
+label{color:#333941!important}
+input{
+ background:#fff!important;color:#17191c!important;border-color:#d8dde3!important;
+ box-shadow:none!important
+}
+input::placeholder{color:#9aa1aa!important}
+input:focus{border-color:#7d8793!important;box-shadow:0 0 0 3px #11111108!important}
+button{
+ background:#17191c!important;color:#fff!important;border:1px solid #17191c!important;
+ box-shadow:none!important
+}
+button:hover{background:#34383e!important;color:#fff!important}
+button:disabled{background:#e8ebef!important;color:#8c949e!important;border-color:#e8ebef!important}
+button.secondary,.secondary{
+ background:#fff!important;color:#333941!important;border-color:#d8dde3!important
+}
+button.secondary:hover,.secondary:hover{background:#f3f5f7!important;color:#17191c!important}
+#error,#message.error{color:#b42318!important}
+#message.success{color:#187341!important}
+.link{color:#6b7280!important}
+.link a{color:#17191c!important}
+.brand{color:#8a919b!important}
+</style>
+
+
+<style id="omnimun-white-auth-v32">
+:root{color-scheme:light!important}
+html,body{background:#f7f8fa!important;color:#202124!important;color-scheme:light!important}
+body{margin:0!important}
+.container{
+  background:#fff!important;color:#202124!important;border:1px solid #e1e5e9!important;
+  border-radius:20px!important;box-shadow:0 20px 65px #1111110d!important;
+}
+.auth-logo{filter:none!important;mix-blend-mode:normal!important;background:transparent!important;object-fit:contain!important;object-position:center!important}
+h1{color:#17191c!important}
+p,.intro,.note{color:#626b76!important}
+.eyebrow{color:#6b7280!important}
+.destination{background:#f7f8fa!important;border-color:#e3e7eb!important;color:#5f6873!important}
+.destination strong{color:#17191c!important}
+label{color:#333941!important}
+input{background:#fff!important;color:#17191c!important;border-color:#d8dde3!important;box-shadow:none!important}
+input::placeholder{color:#9aa1aa!important}
+input:focus{border-color:#7d8793!important;box-shadow:0 0 0 3px #11111108!important}
+button{background:#17191c!important;color:#fff!important;border:1px solid #17191c!important;box-shadow:none!important}
+button:hover{background:#34383e!important;color:#fff!important}
+button:disabled{background:#e8ebef!important;color:#8c949e!important;border-color:#e8ebef!important}
+button.secondary,.secondary{background:#fff!important;color:#333941!important;border-color:#d8dde3!important}
+button.secondary:hover,.secondary:hover{background:#f3f5f7!important;color:#17191c!important}
+#error,#message.error{color:#b42318!important}
+#message.success{color:#187341!important}
+.link{color:#6b7280!important}
+.link a{color:#17191c!important}
+.brand{color:#8a919b!important}
+</style>
+
+</head><body><div class="container"><img src="logo-omnimun.svg" alt="Omnimun logo" class="auth-logo small"><h1>Verify Email</h1><p>Enter the code sent to your Gmail.</p><div id="message" class="message" role="status"></div><label for="email">Email</label><input id="email" type="email" placeholder="your@gmail.com" autocomplete="email" required maxlength="254"><button type="button" id="sendCode" class="secondary">Resend verification code</button><label for="code">Verification Code</label><input id="code" type="text" maxlength="6" inputmode="numeric" pattern="[0-9]{6}" autocomplete="one-time-code" placeholder="123456" required><button type="button" id="verify">Verify Email</button></div>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),send=$('sendCode'),verify=$('verify');let sending=false,verifying=false,until=0,tick=null;
+try{
+ $('email').value=new URLSearchParams(location.search).get('email')||localStorage.getItem('verifyEmail')||'';
+ const savedResendAt=Number(localStorage.getItem('verifyResendAt')||0);
+ if(savedResendAt>Date.now())startCooldown(Math.ceil((savedResendAt-Date.now())/1000));
+ else localStorage.removeItem('verifyResendAt');
+}catch{}
+function message(text,ok=false){$('message').className='message '+(ok?'success':'error');$('message').textContent=text}
+function email(){if(!$('email').reportValidity())throw Error('Enter a valid email.');return $('email').value.trim().toLowerCase()}
+async function post(url,body){const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),60000);try{const res=await fetch(url,{method:'POST',credentials:'same-origin',signal:controller.signal,headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}),data=await res.json().catch(()=>{throw Error('Invalid server response')});if(!res.ok||!data.success)throw Error(data.error||'Request failed');return data}catch(e){throw Error(e.name==='AbortError'?'Request timed out. Please try again.':e.message)}finally{clearTimeout(timer)}}
+function cooldown(){const seconds=Math.max(0,Math.ceil((until-Date.now())/1000));send.disabled=sending||seconds>0;send.textContent=seconds?'Resend available in '+seconds+'s':'Resend verification code';if(!seconds){clearInterval(tick);tick=null}}
+function startCooldown(seconds){until=Date.now()+Math.max(0,seconds)*1000;clearInterval(tick);tick=setInterval(cooldown,250);cooldown()}
+function retrySeconds(text){const seconds=String(text).match(/wait\s+(\d+)\s+seconds?/i);if(seconds)return Number(seconds[1]);const minutes=String(text).match(/wait\s+(\d+)\s+minutes?/i);return minutes?Number(minutes[1])*60:0}
+send.onclick=async()=>{if(sending||Date.now()<until)return;sending=true;send.disabled=true;try{const data=await post('/api/send-code',{email:email()});message(data.message||'Verification code sent.',true);const seconds=Number(data.resendAfterSeconds)||60;startCooldown(seconds);try{localStorage.setItem('verifyResendAt',String(Date.now()+seconds*1000))}catch{}}catch(e){message(e.message);const wait=Number(e.resendAfterSeconds)||retrySeconds(e.message);if(wait){startCooldown(wait);try{localStorage.setItem('verifyResendAt',String(Date.now()+wait*1000))}catch{}}}finally{sending=false;cooldown()}};
+verify.onclick=async()=>{if(verifying)return;verifying=true;verify.disabled=true;try{const address=email(),code=$('code').value.trim();if(!/^\d{6}$/.test(code))throw Error('Enter the 6-digit verification code.');await post('/api/verify',{email:address,code});message('Email verified. Redirecting...',true);try{localStorage.removeItem('verifyEmail');localStorage.removeItem('verifyResendAt')}catch{}location.href='/login.html'}catch(e){message(e.message)}finally{verifying=false;verify.disabled=false}};
+$('email').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.isComposing&&e.keyCode!==229){e.preventDefault();if(!e.repeat)send.click()}});
+$('code').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.isComposing&&e.keyCode!==229){e.preventDefault();if(!e.repeat)verify.click()}});
+</script></body></html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#ffffff"><meta name="referrer" content="strict-origin-when-cross-origin"><title>Login - Omnimun</title>
+<style>
+
+*{box-sizing:border-box}html{color-scheme:light}body{position:relative;isolation:isolate;margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:36px 20px;background:radial-gradient(ellipse at 50% 0%,#1a1a1a 0,transparent 45%),radial-gradient(ellipse at 100% 100%,#111 0,transparent 42%),#070707;font-family:'DM Sans',Inter,Arial,sans-serif;color:#f7f7f7}body:before{content:'';position:fixed;inset:20px;border:1px solid #ffffff08;border-radius:28px;pointer-events:none;z-index:-1}.container{position:relative;width:460px;max-width:100%;padding:42px;border:1px solid #303030;border-radius:25px;background:linear-gradient(145deg,#151515,#0c0c0c 80%);box-shadow:0 30px 100px #0009}h1{margin:0 0 10px;font-family:Manrope,'DM Sans',sans-serif;font-size:34px;font-weight:800;letter-spacing:-1.3px;line-height:1.15;color:#fff}p{margin:0 0 29px;color:#999;font-size:13px;line-height:1.8}label{display:block;margin-bottom:8px;color:#ddd;font-size:12px;font-weight:700;letter-spacing:.2px}input{width:100%;padding:14px 15px;margin-bottom:18px;border:1px solid #353535;border-radius:12px;background:#090909;color:#fff;font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s}input::placeholder{color:#656565}input:focus{border-color:#aaa;box-shadow:0 0 0 3px #ffffff0b}button{width:100%;min-height:47px;padding:13px 16px;border:1px solid #fff;border-radius:12px;background:#fff;color:#050505;font-weight:800;cursor:pointer;transition:transform .18s,background .18s,color .18s,border-color .18s}button:hover{background:#dedede;transform:translateY(-1px)}button:disabled{opacity:.55;cursor:wait;transform:none}#error{margin:0 0 14px;color:#ffb4b4;font-size:12px;line-height:1.6}#verifyHint{color:#bbb!important;font-size:12px!important}#verifyHint a{color:#fff;font-weight:700}.link{text-align:center;margin-top:23px;color:#888;font-size:12px}.link a{color:#fff;font-weight:700;text-decoration:none}.link a:hover{text-decoration:underline}.brand{position:fixed;right:28px;bottom:22px;color:#777;font-size:9px;letter-spacing:2px;text-transform:uppercase}.auth-logo{display:block;width:170px;max-width:100%;max-height:55px;object-fit:contain;object-position:left center;margin:0 0 30px;filter:none}.auth-logo.small{width:155px}.google-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:45px;margin-top:10px;padding:10px 14px;border:1px solid #383838;border-radius:12px;background:#141414;color:#eee;font-size:13px;font-weight:600;box-shadow:none}.google-btn:hover{background:#202020;border-color:#555}.google-btn img{width:18px;height:18px;flex:0 0 18px;object-fit:contain}input+button[type=button]{display:inline-flex;align-items:center;justify-content:center;width:auto;min-height:28px;margin:-9px 0 15px;padding:5px 10px;border:1px solid #383838;border-radius:8px;background:#151515;color:#aaa;font-size:10px;font-weight:600}input+button[type=button]:hover{background:#242424;color:#fff;transform:none}form button[type=submit]{margin-top:2px}#verifyHint a{margin-left:4px}@media(max-width:520px){body{padding:18px 14px}body:before{inset:8px;border-radius:18px}.container{padding:30px 23px;border-radius:20px}h1{font-size:29px}.auth-logo{margin-bottom:24px}.brand{right:18px;bottom:13px;font-size:8px}}
+</style>
+<style id="omnimun-white-auth-theme-v31">
+:root{color-scheme:light!important}
+html{color-scheme:light!important;background:#f7f8fa!important}
+body{
+ background:#f7f8fa!important;color:#202124!important;
+}
+body:before{border-color:#e5e7eb!important}
+.container{
+ background:#fff!important;color:#202124!important;border:1px solid #e2e5e9!important;
+ box-shadow:0 22px 70px #1111110d!important
+}
+.auth-logo{
+ filter:none!important;mix-blend-mode:normal!important;background:transparent!important;
+ object-fit:contain!important;object-position:left center!important
+}
+h1{color:#17191c!important}
+p,.intro,.note{color:#626b76!important}
+.eyebrow{color:#6b7280!important}
+.destination{background:#f7f8fa!important;border-color:#e3e7eb!important;color:#5f6873!important}
+.destination strong{color:#17191c!important}
+label{color:#333941!important}
+input{
+ background:#fff!important;color:#17191c!important;border-color:#d8dde3!important;
+ box-shadow:none!important
+}
+input::placeholder{color:#9aa1aa!important}
+input:focus{border-color:#7d8793!important;box-shadow:0 0 0 3px #11111108!important}
+button{
+ background:#17191c!important;color:#fff!important;border:1px solid #17191c!important;
+ box-shadow:none!important
+}
+button:hover{background:#34383e!important;color:#fff!important}
+button:disabled{background:#e8ebef!important;color:#8c949e!important;border-color:#e8ebef!important}
+button.secondary,.secondary{
+ background:#fff!important;color:#333941!important;border-color:#d8dde3!important
+}
+button.secondary:hover,.secondary:hover{background:#f3f5f7!important;color:#17191c!important}
+#error,#message.error{color:#b42318!important}
+#message.success{color:#187341!important}
+.link{color:#6b7280!important}
+.link a{color:#17191c!important}
+.brand{color:#8a919b!important}
+</style>
+
+
+<style id="omnimun-white-auth-v32">
+:root{color-scheme:light!important}
+html,body{background:#f7f8fa!important;color:#202124!important;color-scheme:light!important}
+body{margin:0!important}
+.container{
+  background:#fff!important;color:#202124!important;border:1px solid #e1e5e9!important;
+  border-radius:20px!important;box-shadow:0 20px 65px #1111110d!important;
+}
+.auth-logo{filter:none!important;mix-blend-mode:normal!important;background:transparent!important;object-fit:contain!important;object-position:center!important}
+h1{color:#17191c!important}
+p,.intro,.note{color:#626b76!important}
+.eyebrow{color:#6b7280!important}
+.destination{background:#f7f8fa!important;border-color:#e3e7eb!important;color:#5f6873!important}
+.destination strong{color:#17191c!important}
+label{color:#333941!important}
+input{background:#fff!important;color:#17191c!important;border-color:#d8dde3!important;box-shadow:none!important}
+input::placeholder{color:#9aa1aa!important}
+input:focus{border-color:#7d8793!important;box-shadow:0 0 0 3px #11111108!important}
+button{background:#17191c!important;color:#fff!important;border:1px solid #17191c!important;box-shadow:none!important}
+button:hover{background:#34383e!important;color:#fff!important}
+button:disabled{background:#e8ebef!important;color:#8c949e!important;border-color:#e8ebef!important}
+button.secondary,.secondary{background:#fff!important;color:#333941!important;border-color:#d8dde3!important}
+button.secondary:hover,.secondary:hover{background:#f3f5f7!important;color:#17191c!important}
+#error,#message.error{color:#b42318!important}
+#message.success{color:#187341!important}
+.link{color:#6b7280!important}
+.link a{color:#17191c!important}
+.brand{color:#8a919b!important}
+</style>
+
+</head><body>
+<div class="container"><img src="logo-omnimun.svg" alt="Omnimun logo" class="auth-logo"><h1>Welcome Back</h1><p>Sign in with your credentials. For your security, we will send a one-time code to your registered email address before granting access to your workspace.</p><div id="error" role="alert"></div><div id="verifyHint" style="color:#777;font-size:13px;margin-bottom:15px"></div><form id="loginForm"><label for="username">Username / Email</label><input id="username" type="text" placeholder="Enter username or email" autocomplete="username" maxlength="254" required><label for="password">Password</label><input id="password" type="password" placeholder="Enter password" autocomplete="current-password" maxlength="128" required><button type="submit">Sign In</button><button type="button" class="google-btn" id="google"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.6 12.2c0-.7-.1-1.4-.2-2.1H12v4h5.4a4.6 4.6 0 0 1-2 3v2.6h3.3c1.9-1.7 2.9-4.3 2.9-7.5z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.7-2.4L15.4 17c-.9.6-2 .9-3.4.9-2.6 0-4.8-1.8-5.6-4.2H3v2.6A10 10 0 0 0 12 22z"/><path fill="#FBBC05" d="M6.4 13.7a6 6 0 0 1 0-3.4V7.7H3a10 10 0 0 0 0 8.6z"/><path fill="#EA4335" d="M12 6.1c1.5 0 2.8.5 3.8 1.5l2.9-2.9A9.6 9.6 0 0 0 12 2a10 10 0 0 0-9 5.7l3.4 2.6C7.2 7.9 9.4 6.1 12 6.1z"/></svg>Continue with Google</button></form><div class="link">Don't have an account? <a href="register.html">Create account</a></div></div><div class="brand">Made by Orthera</div>
+<script>
+'use strict';
+const form=document.getElementById('loginForm'),error=document.getElementById('error'),submit=form.querySelector('[type=submit]');let busy=false;const reason=new URLSearchParams(location.search).get('reason');
+const reasonMessages={
+ 'challenge-expired':'Your sign-in verification session expired. Please sign in again.',
+ 'google-not-configured':'Google sign-in is not configured on this server yet.',
+ 'google-failed':'Google sign-in could not be completed. Please try again.',
+ 'google-code-limit':'Google confirmed your identity, but the sign-in code limit has been reached. Please wait before trying again.',
+ 'google-code-failed':'Google confirmed your identity, but we could not send the sign-in code. Please try again later.'
+};
+if(reasonMessages[reason])error.textContent=reasonMessages[reason];
+document.getElementById('google').onclick=()=>location.href='/auth/google';
+const password=document.getElementById('password'),toggle=document.createElement('button');toggle.type='button';toggle.textContent='Show';toggle.style.marginBottom='10px';toggle.onclick=()=>{password.type=password.type==='password'?'text':'password';toggle.textContent=password.type==='password'?'Show':'Hide'};password.after(toggle);
+form.addEventListener('submit',async e=>{
+ e.preventDefault();if(busy||!form.reportValidity())return;
+ busy=true;submit.disabled=true;submit.textContent='Checking credentials...';error.textContent='';document.getElementById('verifyHint').replaceChildren();
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),60000);
+ try{
+  const res=await fetch('/api/login',{method:'POST',credentials:'same-origin',signal:controller.signal,headers:{'Content-Type':'application/json'},body:JSON.stringify({username:document.getElementById('username').value.trim(),password:password.value})});
+  const data=await res.json().catch(()=>{throw Error('Invalid server response')});
+  if(data.requiresEmailVerification){
+   error.textContent=data.error||'Your registration email has not been verified yet.';
+   const a=document.createElement('a');a.href='verify.html?email='+encodeURIComponent(data.verificationEmail||'');a.textContent='Verify registration email';document.getElementById('verifyHint').append(a);
+   return;
+  }
+  if(!res.ok||!data.success)throw Error(data.error||'Unable to start sign-in.');
+  if(data.requiresVerification){location.href='/login-verify.html';return}
+  location.href='/index.html';
+ }catch(err){
+  error.textContent=err.name==='AbortError'?'Request timed out. Please try again.':err.message;
+ }finally{
+  clearTimeout(timer);busy=false;submit.disabled=false;submit.textContent='Sign In';delete form.dataset.processing;
+ }
+});
+</script></body></html>
